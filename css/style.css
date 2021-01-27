@@ -132,7 +132,6 @@ nav{
 .page-header__item li{
 display: flex;
 align-items: center;
-justify-content: space-around;
 border: none;
 font-family: inherit;
 background-color: #05676e;
