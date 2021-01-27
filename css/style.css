@@ -7,7 +7,7 @@ Secondary Color: #97D477;
  */
 
 
-:root {
+ :root {
   --text-color: #00b7c2;
   --primary-color: #1b262c;
   --footer-header: #464f53;
@@ -98,44 +98,43 @@ svg path {
   margin-right: 25px;
   border-radius: 50%;
 }
-
+/*----------------------------------------------------------------------------------------*/
 .page-header {
   background-color: var(--footer-header);
   display: flex;
+  flex-direction: row;
   justify-content: space-between; /*this send the menu to the right*/
+  align-items: center;
   width: 100%;
   padding: 20px;
+} /*. the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
+
+
+.page-header:last-child {
+  flex: 1 1 auto;
 }
+
 .page-header__logo{
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.logo-span{
+  text-transform: uppercase;
   font-weight: bold;
 }
 
-.page-header__item {
-  flex: 0 1 auto;
+nav{
+  width: 50%;
 }
 
-.page-header__item:first-child{
-  font-size: 25px
-}
-.page-header__item:last-child {
-  flex-grow: 1;
-  flex-direction: row;
-  text-align: right;
-}
-
-.page-header ul{
-  width: 400px;
-}
 .page-header__item li{
 display: flex;
 align-items: center;
 justify-content: space-around;
-padding: 0px 0px 0px 15px;
 border: none;
 font-family: inherit;
 background-color: #05676e;
-color: white !important;
 text-decoration:none;
 padding: 10px;
 border-radius: 3px;
@@ -146,9 +145,11 @@ transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 .page-header__item li:hover {
   cursor: pointer;
   opacity: 0.8;
+  font-size: 20px;
  }
 .page-header__item li a{
   text-decoration: none;
+  color:#ffffff
 }
 
 
@@ -157,23 +158,55 @@ list-style-type: none;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-}
+padding: 0px;
+} /*with page-header__item I changed the direction of the nav-list to row */
 
 .navigation-list__item--active {
   text-decoration: none;
+  opacity: 0.8;
+  background-color:black;
 }
-    /* header media query*/
+
+  /* header media query*/
+
+@media all and (min-width: 500px) and (max-width: 830px){
+  nav{
+    width: 60%;
+  }
+  
+  .page-header__item li{
+    font-size: 18px;
+  }
+  .page-header__logo{
+    font-size: 25px;
+     }
+}
+
 @media all and (max-width: 500px){
   .page-header__logo{
-    font-size: 15px;
-    font-weight: bold;
-  }
+    font-size: 20px;
+    }
   .page-header__item li{
     font-size: 10px;
-    font-weight: bold;
+    width: 100%
+        
     }
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-header__item{
+    flex-direction: column;
+    padding: 0px;
+    margin: 5px;
+   }
+   nav{
+     justify-content: center;
+   }
+
 }
    /*header media query ends*/
+/*--------------------------------------------------------------------*/
 
 .page-footer {
   background-color: var(--footer-header);
