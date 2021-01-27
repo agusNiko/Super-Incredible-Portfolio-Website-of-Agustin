@@ -117,11 +117,12 @@ svg path {
 .page-header__logo{
   font-size: 25px;
   font-weight: 400;
+  font-family: 'Chakra Petch' , sans-serif;;
 }
 
 .logo-span{
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 nav{
