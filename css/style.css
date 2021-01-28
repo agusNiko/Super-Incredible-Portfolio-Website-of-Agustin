@@ -6,20 +6,19 @@ Primary Color: #1b262c;
 Secondary Color: #97D477;
  */
 
-
- :root {
-  --text-color: #00b7c2;
-  --primary-color: #1b262c;
-  --footer-header: #464f53;
-  --butons-and-details: #82e262;
-
+:root {
+  --text-color: #495464;
+  --primary-color: #f4f4f2;
+  --footer-header: #e8e8e8;
+  --butons-and-details: #bbbfca;
   --font-weight-h: 700;
   --font-weight-text: 400;
-} 
+}
 
 * {
   box-sizing: border-box;
 }
+
 html {
   height: 100%;
 }
@@ -30,7 +29,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background: var(--primary-color);
-  color: var(--text-color); 
+  color: var(--text-color);
   margin: 0;
   height: 100%;
   display: flex;
@@ -41,7 +40,7 @@ body {
 h1 {
   font-size: 26px;
   font-weight: var(--font-weight-h);
-  padding: 15px
+  padding: 15px;
 }
 
 h2 {
@@ -58,39 +57,40 @@ a {
   color: var(--butons-and-details);
 }
 
-
 a:visited {
   color: var(--butons-and-details);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
 a:active {
-  color: #ffffff;
+  color: #fff;
 }
 
-.quote{
+.quote {
   font-size: 15px;
-  color: #000000
+  color: #000;
 }
-.quote a{
+
+.quote a {
   text-decoration: none;
- }
+}
 
 svg path {
-  fill: var(--text-color)
-}
-
-.find-me-icon:hover{
-  opacity: 0.8;
+  fill: var(--text-color);
 }
 
 .find-me-icon {
   display: inline-block;
 }
-  
+
+.find-me-icon:hover {
+  opacity: 0.8;
+}
+
 .profile__portrait {
   float: left;
   width: 300px;
@@ -98,127 +98,148 @@ svg path {
   margin-right: 25px;
   border-radius: 50%;
 }
-/*----------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------- */
+
 .page-header {
   background-color: var(--footer-header);
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /*this send the menu to the right*/
+  justify-content: space-between; /* this send the menu to the right */
   align-items: center;
   width: 100%;
   padding: 20px;
-} /*. the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
+} /* . the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
 
+.botton-line {
+  width: 100%;
+  height: 1.5px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  align-items: flex-end;
+}
 
 .page-header:last-child {
   flex: 1 1 auto;
 }
 
-.page-header__logo{
+.page-header__logo {
   font-size: 25px;
   font-weight: 400;
-  font-family: 'Chakra Petch' , sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
-.logo-span{
+.logo-span {
   text-transform: uppercase;
   font-weight: 700;
 }
 
-nav{
+nav {
   width: 50%;
 }
 
-.page-header__item li{
-display: flex;
-align-items: center;
-border: none;
-font-family: inherit;
-background-color: #05676e;
-text-decoration:none;
-padding: 10px;
-border-radius: 3px;
-border-bottom: 2px solid #03474c;
-transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
-}
-
-.page-header__item li:hover {
-  cursor: pointer;
-  opacity: 0.8;
-  font-size: 20px;
- }
-.page-header__item li a{
+.navigation-list__item {
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: inherit;
+  background-color: #495464;
   text-decoration: none;
-  color:#ffffff
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #03474c;
+  transition: 0.4s opacity, 0.5s background-color;
 }
-
-
-.page-header__item{
-list-style-type: none;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 0px;
-} /*with page-header__item I changed the direction of the nav-list to row */
 
 .navigation-list__item--active {
   text-decoration: none;
   opacity: 0.8;
-  background-color:black;
+  background-color: #000;
 }
 
-  /* header media query*/
+.page-header__item li:hover {
+  opacity: 0.8;
+}
 
-@media all and (min-width: 500px) and (max-width: 830px){
-  nav{
+.navigation-list__item a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.page-header__item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+/* with page-header__item I changed the direction of the nav-list to row */
+
+/* header media query */
+
+@media all and (min-width: 500px) and (max-width: 830px) {
+  nav {
     width: 60%;
   }
-  
-  .page-header__item li{
+
+  .page-header__item li {
     font-size: 18px;
   }
-  .page-header__logo{
+
+  .page-header__logo {
     font-size: 25px;
-     }
+  }
 }
 
-@media all and (max-width: 500px){
-  .page-header__logo{
-    font-size: 20px;
-    }
-  .page-header__item li{
-    font-size: 10px;
-    width: 100%
-        
-    }
+@media all and (max-width: 500px) {
   .page-header {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 10px 0 0;
   }
-  .page-header__item{
-    flex-direction: column;
-    padding: 0px;
-    margin: 5px;
-   }
-   nav{
-     justify-content: center;
-   }
 
+  .page-header__logo {
+    font-size: 15px;
+  }
+
+  .page-header__item li {
+    font-size: 20px;
+    height: 60px;
+    text-align: center;
+  }
+
+  .page-header__item {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
-   /*header media query ends*/
-/*--------------------------------------------------------------------*/
+
+/* header media query ends */
+
+/* -------------------------------------------------------------------- */
 
 .page-footer {
   background-color: var(--footer-header);
   opacity: 0.5;
-  padding: 0 5px 5px 5px;
+  padding: 0 5px 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   clear: both;
   width: 100%;
-  height:  140px;
+  height: 140px;
 }
 
 .profile {
@@ -228,34 +249,34 @@ padding: 0px;
   line-height: 25px;
 }
 
-.contact-me-info{
-  padding: 0px 0px 15px 20px;
-  }
-.contact-me-info h1{
-  font-family: 'Chakra Petch' , sans-serif;;
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
-  }
-
-.my-work h1{
-  font-family: 'Chakra Petch' , sans-serif;;
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
+.contact-me-info {
+  padding: 0 0 15px 20px;
 }
- 
+
+.contact-me-info h1 {
+  font-family: 'Chakra Petch', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.my-work h1 {
+  font-family: 'Chakra Petch', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
 
 .form-seccition__div {
   display: flex;
   justify-content: center;
-  }
+}
 
 #contact-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center,
+  align-items: center;
 }
 
 button,
@@ -264,19 +285,19 @@ button,
   cursor: pointer;
   font-family: inherit;
   display: inline-block;
-	border-radius: 3px;
-	padding: 7px 12px;
-	border: 1px solid #D5D5D5;
-  color: #FFF;
-	background: #569E3D linear-gradient(#82e262, #529b39) repeat-x;
-  border-color: #4A993E;
+  border-radius: 3px;
+  padding: 7px 12px;
+  border: 1px solid #d5d5d5;
+  color: #fff;
+  background: #569e3d linear-gradient(#82e262, #529b39) repeat-x;
+  border-color: #4a993e;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   text-decoration: none;
   transition: 0.7s opacity;
 }
 
-button:hover, 
-button:focus
+button:hover,
+button:focus,
 .contact-form__submit:hover,
 .contact-form__submit:focus,
 .button:hover,
@@ -285,12 +306,12 @@ button:focus
   opacity: 0.8;
 }
 
-.button:visited{
-  color:white;
+.button:visited {
+  color: white;
 }
 
-/* aligning the about page start*/
-.about-me__flexbox{
+/* aligning the about page start */
+.about-me__flexbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,30 +319,33 @@ button:focus
   width: 100%;
 }
 
-.about-me__preview{
+.about-me__preview {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.activity-list{
+
+.activity-list {
   list-style-type: none;
   text-align: center;
-  padding: 0px;
+  padding: 0;
 }
-/* aligning the about page end*/
 
-/*start grid fallback*/
+/* aligning the about page end */
+
+/* start grid fallback */
 
 .grid__item {
   display: inline-block;
   width: 33%;
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   border: 4px solid var(--butons-and-details);
   padding: 10px;
 }
-/*end grid fallback */
 
-@supports (display: grid) { 
+/* end grid fallback */
+
+@supports (display: grid) {
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -333,9 +357,9 @@ button:focus
   .grid__item {
     width: auto;
     min-height: auto;
-    margin:0;
+    margin: 0;
   }
-    
+
   .grid__item:last-child {
     grid-column: 3 / 3;
     grid-row: 1 / 4;
@@ -352,39 +376,45 @@ button:focus
     grid-template-columns: 1fr;
     grid-gap: 10px;
   }
-  .grid__item:last-child {
+
+  .grid__item: last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   .grid__item-5 {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
 
-/*animation SVG*/
+/* animation SVG */
 
 @keyframes sailboat-1-move {
   from {
-    transform: translate(40px, 0px);
+    transform: translate(40px, 0);
   }
+
   to {
     transform: translate(-500px, -20px);
   }
@@ -392,8 +422,9 @@ button:focus
 
 @keyframes sailboat-2-move {
   from {
-    transform: translate(-200px, 0px);
+    transform: translate(-200px, 0);
   }
+
   to {
     transform: translate(500px, -10px);
   }
@@ -403,19 +434,19 @@ button:focus
   animation-duration: 20s;
   animation-name: sailboat-1-move;
   animation-iteration-count: infinite;
-  animation-direction:normal  ;
+  animation-direction: normal;
   animation-timing-function: linear;
 }
 
 #sailboat-2 {
   animation: 15s sailboat-2-move infinite normal linear;
-
 }
 
 @keyframes cloud-move-reverse {
   from {
-    transform: translate(0px, -80px);
+    transform: translate(0, -80px);
   }
+
   to {
     transform: translate(446px, -80px);
   }
@@ -433,9 +464,11 @@ button:focus
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #fd5d07;
   }
@@ -453,11 +486,13 @@ button:focus
   0% {
     fill: #fdfdfd;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
-    fill: #000000;
+    fill: #000;
   }
 }
 
@@ -469,15 +504,16 @@ button:focus
   animation-timing-function: linear;
 }
 
-
 @keyframes cargo-ship-movement {
   from {
-    transform: translate(-2px, 0px);
+    transform: translate(-2px, 0);
   }
+
   to {
     transform: translate(-2px, 20px);
   }
 }
+
 .cargo-ship {
   animation-duration: 10s;
   animation-name: cargo-ship-movement;
@@ -486,4 +522,4 @@ button:focus
   animation-timing-function: linear;
 }
 
-/* animation ends*/
+/* animation ends */
