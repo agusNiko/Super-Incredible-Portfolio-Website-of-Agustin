@@ -97,17 +97,31 @@ svg path {
   height: auto;
   margin-right: 25px;
   border-radius: 50%;
+  box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+  transition: all ease-in-out 0.2s;
+}
+
+.profile__portrait:hover {
+  box-shadow: 0 8px 12px 0 rgba(60, 60, 80, 0.4);
+}
+
+.profile-regards {
+  padding-left: 20px;
 }
 
 /* ---------------------------------------------------------------------------------------- */
+header {
+  background-color: var(--footer-header);
+  opacity: 0.5;
+}
 
 .page-header {
-  background-color: var(--footer-header);
   display: flex;
   flex-direction: row;
   justify-content: space-between; /* this send the menu to the right */
   align-items: center;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   padding: 20px;
 } /* . the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
 
@@ -229,23 +243,39 @@ nav {
 /* -------------------------------------------------------------------- */
 
 .page-footer {
-  background-color: var(--footer-header);
+  background-image: url(../img/Hexagon-dotted-connect-line-background.1.jpg);
+  background-size: cover;
+  background-position: center;
   opacity: 0.5;
   padding: 0 5px 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   clear: both;
   width: 100%;
   height: 140px;
 }
 
+.social-media {
+  padding: 0 0 20px;
+}
+
 .profile {
+  display: flex;
+  align-items: center;
   max-width: 700px;
   margin: 0 auto;
   text-align: left;
   line-height: 25px;
+}
+
+.profile h1 {
+  font-size: 44px;
+  font-weight: 700;
+  background: linear-gradient(to left, #6f6f89, #000); /* creates a background gradient */
+  -webkit-background-clip: text; /* "clips" the backgrouncolor with the text */
+  -webkit-text-fill-color: transparent; /* make trasparent the text so you can see the cliped background color */
 }
 
 .contact-me-info {
