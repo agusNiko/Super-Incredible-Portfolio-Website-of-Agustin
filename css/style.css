@@ -32,13 +32,8 @@ body {
   color: var(--text-color);
   margin: 0; /* its better to have 0 here, so it is easier to interpret by the browser */
   height: 100%; /* tells the browser to cover at least 100% of the screen */
-  display: flex; /* The body is the flex conteiner from head, main and footer */
-  flex-direction: column; /* vertical align the head, main and footer */
-  justify-content: space-between; /* spreads the head to the top, the footer to the bottom and spaces evenly in between */
-}
-
-main {
-  flex: 1;
+  display: grid;
+      grid-template-rows: auto 1fr auto;
 }
 
 h1 {
