@@ -20,7 +20,7 @@ Secondary Color: #97D477;
 }
 
 html {
-  height: 100%;
+  height: 100%; /* tells the browser to cover at least 100% of the screen */
 }
 
 body {
@@ -96,7 +96,6 @@ svg path {
   justify-content: center;
 }
 
-
 .profile__portrait {
   float: left;
   width: 300px;
@@ -123,7 +122,7 @@ header {
 
 .page-header {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between; /* this send the menu to the right */
   align-items: center;
   width: 90%;
