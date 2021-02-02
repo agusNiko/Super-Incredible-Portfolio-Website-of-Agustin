@@ -33,7 +33,7 @@ body {
   margin: 0; /* its better to have 0 here, so it is easier to interpret by the browser */
   height: 100%; /* tells the browser to cover at least 100% of the screen */
   display: grid;
-      grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
 }
 
 h1 {
@@ -88,6 +88,10 @@ svg path {
 
 .find-me-icon:hover {
   opacity: 0.8;
+}
+
+main {
+  padding-bottom: 20px;
 }
 
 .index-main {
