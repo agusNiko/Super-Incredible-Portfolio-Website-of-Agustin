@@ -118,6 +118,7 @@ main {
 }
 
 /* ---------------------------------------------------------------------------------------- */
+
 header {
   background-color: var(--footer-header);
   opacity: 0.5;
@@ -155,6 +156,7 @@ header {
 }
 
 nav {
+  max-width: 500px;
   width: 50%;
 }
 
@@ -205,6 +207,7 @@ nav {
 @media all and (min-width: 500px) and (max-width: 830px) {
   nav {
     width: 60%;
+    margin: auto;
   }
 
   .page-header__item li {
@@ -213,6 +216,7 @@ nav {
 
   .page-header__logo {
     font-size: 25px;
+    margin: auto;
   }
 }
 
@@ -226,6 +230,7 @@ nav {
 
   .page-header__logo {
     font-size: 15px;
+    margin: auto;
   }
 
   .page-header__item li {
