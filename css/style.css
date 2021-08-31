@@ -97,6 +97,7 @@ main {
 .index-main {
   display: flex;
   justify-content: center;
+  height: 80vh;
 }
 
 .profile__portrait {
@@ -361,6 +362,11 @@ button:focus,
 }
 
 /* aligning the about page start */
+
+.about-me {
+  height: 100vh;
+  background-color: #edc655;
+}
 .about-me__flexbox {
   display: flex;
   align-items: center;
@@ -370,6 +376,11 @@ button:focus,
 }
 
 .about-me__preview {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-me {
   display: flex;
   align-items: center;
   flex-direction: column;
