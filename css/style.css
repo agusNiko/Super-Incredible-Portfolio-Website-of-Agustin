@@ -425,10 +425,22 @@ button:focus,
   padding: 20px;
 }
 
-#more {
+/* work js functionality */
+#more,
+#more1,
+#more2,
+#more3,
+#more4,
+#more5 {
   display: none;
 }
-#readMore {
+
+#readMore,
+#readMore1,
+#readMore2,
+#readMore3,
+#readMore4,
+#readMore5 {
   background: none;
   border: none;
   padding: 0;
@@ -436,6 +448,8 @@ button:focus,
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* work js functionality */
 
 @supports (display: grid) {
   .grid {
