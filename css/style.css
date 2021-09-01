@@ -97,7 +97,7 @@ main {
 .index-main {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -125,6 +125,8 @@ main {
 header {
   background-color: var(--footer-header);
   opacity: 0.5;
+  position: fixed;
+  width: 100%;
 }
 
 .page-header {
@@ -132,9 +134,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between; /* this send the menu to the right */
   align-items: center;
-  width: 90%;
-  margin: auto;
-  padding: 20px;
 } /* . the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
 
 .botton-line {
@@ -165,6 +164,8 @@ header {
 
 nav {
   width: 50%;
+  display: flex;
+  justify-content: end;
 }
 
 .navigation-list__item {
@@ -178,12 +179,14 @@ nav {
   border-radius: 3px;
   border-bottom: 2px solid #fff;
   transition: 0.4s opacity, 0.5s background-color;
+  margin: 10px;
 }
 
 .navigation-list__item--active {
   text-decoration: none;
   opacity: 0.8;
   background-color: #000;
+  margin: 10px;
 }
 
 .page-header__item li:hover {
@@ -283,6 +286,7 @@ nav {
   margin: auto;
   display: flex;
   justify-content: space-around;
+  flex-grow: 0.5;
 }
 
 .profile {
@@ -294,6 +298,10 @@ nav {
   text-align: left;
   line-height: 25px;
   flex-wrap: wrap;
+  flex-grow: 20;
+}
+.extra__div-profile {
+  flex-grow: 8;
 }
 
 .profile h1 {
