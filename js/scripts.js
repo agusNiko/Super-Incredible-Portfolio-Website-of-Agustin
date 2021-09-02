@@ -1,3 +1,46 @@
+// burger menu
+
+const navMenu = () => {
+  let burger = document.getElementById("burger");
+  let nav = document.querySelector(".page-header__item");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-items__active");
+
+    //burger animation
+
+    burger.classList.toggle("burger__toggle");
+  });
+};
+navMenu();
+
+//changing active nav-button on scroll and click
+
+const sections = Array.from(document.querySelectorAll("section"));
+const menuItems = Array.from(
+  document.querySelectorAll(".navigation-list__item")
+);
+
+const highlightMenu = () => {
+  let activeIndex = 0;
+  sections.forEach((el, index) => {
+    if (window.scrollY >= el.offsetTop) {
+      activeIndex = index;
+    }
+  });
+  console.log(window.scrollY);
+  menuItems.forEach((el) => {
+    el.classList.remove("navigation-list__item--active");
+  });
+  menuItems[activeIndex].classList.add("navigation-list__item--active");
+};
+
+window.addEventListener("scroll", highlightMenu);
+menuItems.forEach((el) => {
+  el.addEventListener("click", highlightMenu);
+});
+
+//show and hide details about the projects
 function showMore() {
   let dots = document.getElementById("dots");
   let moreText = document.getElementById("more");

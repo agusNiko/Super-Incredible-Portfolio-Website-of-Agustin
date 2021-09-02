@@ -19,39 +19,45 @@
   </head>
   <body>
       <header>
-        <div class="page-header">
-          <div role="img" class="page-header__item page-header__logo">
-            agus<span class="logo-span">Portfolio</span>
+     
+          <nav class="page-header">
+            <div role="img" class="page-header__logo">
+              <h1>agusPORTFOLIO</h1>
             </div>
-          <nav>
-              <ul role="menubar" class="page-header__item">
-                  <li role="presentation" class="navigation-list__item navigation-list__item--active">
-                      <a href="index.html" role="menuitem" >Home</a>
-                  </li>
-                  <li role="presentation" class="navigation-list__item">
-                      <a href="about.html" role="menuitem" >About</a>
-                  </li>
-                  <li role="presentation" class="navigation-list__item">
-                      <a href="contact.html" role="menuitem" >Contact</a>
-                  </li>
-                  <li role="presentation" class="navigation-list__item">
-                      <a href="work.html" role="menuitem" >Work</a>
-                  </li>
-              </ul>
+            <div class="burger" id="burger">
+              <div class="burger__line1"></div>
+              <div class="burger__line2"></div>
+              <div class="burger__line3"></div>
+            </div>
+          
+            <ul role="menubar" class="page-header__item">
+                <li role="presentation" class="navigation-list__item navigation-list__item--active">
+                    <a href="#" role="menuitem" >Home</a>
+                </li>
+                <li role="presentation" class="navigation-list__item">
+                    <a href="#about-me" role="menuitem" >About</a>
+                </li>
+                <li role="presentation" class="navigation-list__item">
+                    <a href="#my-work" role="menuitem" >Work</a>
+                </li>
+                <li role="presentation" class="navigation-list__item">
+                  <a href="#contact-me" role="menuitem" >Contact</a>
+              </li>
+            </ul>
           </nav>
-        </div>
-          <div class="botton-line"></div>
+
+          
       </header>
       <main>
   
-        <div class="index-main">
+        <section class="index-main">
           <div class="extra__div-profile"></div>
           <div class="profile">
                 <img src="./img/IMG_20190606_113137.jpg" class="profile__portrait" alt="a photo of Agustin smiling">
                 <div class="profile-regards">
-                  <h1>Hello World!</h1>
-                  <h2>My name is Agustin Polegre.</h2>
-                  <h2>I am <span> &lt;web&gt; developer from the world</span> located in Hamburg, Germany.</h2>
+                  <h1>Hi,</h1>
+                  <h2>My name Agustin Polegre.</h2>
+                  <h2>I am <span> &lt;web&gt; developer</span> located in Hamburg, Germany.</h2>
                   <h2>Lets create the future together!</h2>
                   <a href="#my-work" >Check out some of my code.</a>
                 </div>
@@ -77,10 +83,13 @@
           </a>
           </div>
 
-        </div>
+        </section>
 
-          <section   class="about-me">
+          <section   class="about-me" id="about-me">
             <h1 class="section__top-margin">About</h1>
+
+            <p>Web developer with a background in different branches of the pharmaceutical industry, marketing, and gastronomy. Experienced working across multidisciplinary teams to identify problems, gather requirements, research, negotiate agreements on solutions, and meet deadlines. Always willing to learn on the move if necessary and to give the extra mile!</p>
+
             <h2>Technologies I've used</h2>
             <div class="tech__Icons"  >              
                 
@@ -190,10 +199,10 @@
                     </div>
 
                     <div class="grid__item">
-                        <img src="./img/meet-app.JPG" class="meet__screenshot" alt="image of the meet application">
-                        <h2>Meetup App</h2>
+                        <img src="./img/portfilio-web.JPG" class="meet__screenshot" alt="image of the meet application">
+                        <h2>The Super Incredible Portfolio of Agustin</h2>
                         <p>
-                          A serverless, progressive web application (PWA) built with React and using a test-driven development (TDD) technique. It uses the Google Calendar API and OAuth2 authentication flow to fetch upcoming events allowing users to search for a city and get a list of events hosted in that city and makes use of data visualization (recharts library). A service worker allows the app to work offline or in slow network conditions
+                          A responsive one page website to showcase my professional portfolio, It’s written using pure HTML and CSS with a touch of JS to to toggle a hamburger menu and read-more buttons. I didn't use any framework or library for it intentionally. Native Variables were use to code repetitive values.
                           <span id="dots2">...</span><div id="more2"> 
                               <h2>Technical Requirements</h2>
                               About: 
@@ -312,15 +321,15 @@
                 </div>
             </section>
 
-            <section class="contact-me">
-                <h1>Contact me</h1>
-                <div>Agustin Polegre<br>
-                  22523 Hamburg<br>
-                  Deutschland<br>
+            <section class="contact-me" id="contact-me">
+                <h1>Let's work together</h1> 
+                <div>Agustin Nicolas Polegre Solis<br>
+                  Hamburg, Germany<br>
                   <br>
-                  Telephone <a href="tel:+49015204397828" aria-label="telephone number">+49 0152 0439 7828</a> <br>
+                  <span class="email"> &#9743;</span> <a href="tel:+49015204397828" aria-label="telephone number">+49 0152 0439 7828</a> <br>
+                  <i class="fa fa-skype"></i>
                   Skype: <a href="skype:mySkype">mySkype</a><br>
-                  Contact me:
+                  <span class="email">&#9993</span>
                   <a href="mailto:agustinpolegre(at)gmail(dot)com?cc=anps88(at)hotmail(dot)com&subject=info&body=Hey%20Agustin%20we%20want%20to%20hire%20you%20give%20us%20a%20call">agustinpolegre@gmail</a>
                 </div>
                 

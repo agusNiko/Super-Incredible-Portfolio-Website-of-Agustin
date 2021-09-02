@@ -26,7 +26,7 @@ html {
 body {
   font-family: "Lato", sans-serif;
   font-weight: var(--font-weight-text);
-  font-size: 16px;
+  font-size: 26px;
   line-height: 1.6;
   background: var(--primary-color);
   color: var(--text-color);
@@ -37,13 +37,13 @@ body {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: var(--font-weight-h);
   padding: 15px;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: var(--font-weight-h);
 }
 
@@ -118,7 +118,7 @@ main {
 
 .profile-regards {
   padding-left: 20px;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 /* ---------------------------------------------------------------------------------------- */
@@ -130,36 +130,17 @@ header {
 }
 
 .page-header {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* this send the menu to the right */
+  justify-content: space-around; /* this send the menu to the right */
   align-items: center;
 } /* . the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
-
-.botton-line {
-  width: 100%;
-  height: 1.5px;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0)
-  );
-}
-
-.page-header:last-child {
-  flex: 1 1 auto;
-}
 
 .page-header__logo {
   font-size: 25px;
   font-weight: 400;
   font-family: "Chakra Petch", sans-serif;
-}
-
-.logo-span {
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 nav {
@@ -205,10 +186,27 @@ nav {
 .page-header__item {
   list-style-type: none;
   display: flex;
-  flex-direction: row;
+
   justify-content: space-between;
   padding: 0;
 }
+
+/*burger menu header*/
+.burger {
+  display: none;
+  position: fixed;
+  align-self: end;
+  margin-right: 20px;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/*burger menu header ends*/
 
 /* with page-header__item I changed the direction of the nav-list to row */
 
@@ -229,6 +227,9 @@ nav {
 }
 
 @media all and (max-width: 500px) {
+  main {
+    margin-top: 12vh;
+  }
   .page-header {
     flex-direction: column;
     align-items: center;
@@ -247,9 +248,22 @@ nav {
   }
 
   .page-header__item {
+    width: 100vw;
+    top: 8vh;
+    position: absolute;
     flex-direction: column;
+    justify-content: space-around;
     padding: 0;
     margin: 0;
+    height: 50vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 100;
   }
 
   nav {
@@ -257,6 +271,22 @@ nav {
     width: 100%;
     padding: 0;
     margin: 0;
+    height: 8vh;
+  }
+
+  .nav-items__active {
+    transform: translateX(0%);
+  }
+
+  .burger__toggle .burger__line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger__toggle .burger__line2 {
+    opacity: 0;
+  }
+
+  .burger__toggle .burger__line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
 
@@ -406,6 +436,8 @@ button:focus,
   align-items: center;
   flex-direction: column;
   background-color: #272626;
+  height: 90vh;
+  color: #e8e8e8;
 }
 
 .tech__Icons {
@@ -446,6 +478,8 @@ button:focus,
 
 .meet__screenshot {
   max-width: 500px;
+  margin: 0 auto;
+  display: block;
 }
 
 .work__buttons {
@@ -479,6 +513,10 @@ button:focus,
   cursor: pointer;
 }
 
+.email {
+  font-size: 50px;
+}
+
 /* work js functionality */
 
 @supports (display: grid) {
@@ -494,15 +532,6 @@ button:focus,
     width: auto;
     min-height: auto;
     margin: 0;
-  }
-
-  .grid__item:last-child {
-    grid-row: 1 / 4;
-  }
-
-  .grid__item-5 {
-    grid-column: 1 / 3;
-    grid-row: 3 / 3;
   }
 }
 
@@ -540,6 +569,18 @@ button:focus,
 
   .meet__screenshot {
     max-width: 300px;
+  }
+  .about-me,
+  .index-main {
+    height: auto;
+  }
+
+  .social-media {
+    padding: 20px 0 20px;
+  }
+
+  .contact-me {
+    height: auto;
   }
 }
 
