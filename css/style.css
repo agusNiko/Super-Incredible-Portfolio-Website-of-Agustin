@@ -327,6 +327,10 @@ nav {
   margin: 0;
 }
 
+.section__top-margin {
+  padding-top: 110px;
+}
+
 .my-work h1 {
   font-family: "Chakra Petch", sans-serif;
   text-align: center;
@@ -381,8 +385,9 @@ button:focus,
 
 .about-me {
   height: 100vh;
-  background-color: #edc655;
+  background-color: #272626;
 }
+
 .about-me__flexbox {
   display: flex;
   align-items: center;
@@ -400,6 +405,23 @@ button:focus,
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #272626;
+}
+
+.tech__Icons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.dev__Icon {
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .activity-list {
