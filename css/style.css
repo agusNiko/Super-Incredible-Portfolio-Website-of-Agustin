@@ -121,10 +121,9 @@ main {
   max-width: 450px;
 }
 
-/* ---------------------------------------------------------------------------------------- */
 header {
   background-color: var(--footer-header);
-  opacity: 0.5;
+
   position: fixed;
   width: 100%;
 }
@@ -135,6 +134,8 @@ header {
   flex-wrap: wrap;
   justify-content: space-around; /* this send the menu to the right */
   align-items: center;
+  background-color: #000;
+  height: 100px;
 } /* . the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
 
 .page-header__logo {
@@ -144,9 +145,20 @@ header {
 }
 
 nav {
-  width: 50%;
   display: flex;
   justify-content: end;
+}
+
+.menu-background {
+  display: none;
+  width: 100%;
+  background-color: --footer-header;
+  height: 50vh;
+  transition: transform 0.5s ease-in;
+}
+
+.menu-background--Active {
+  display: block;
 }
 
 .navigation-list__item {
@@ -154,20 +166,20 @@ nav {
   justify-content: center;
   border: none;
   font-family: inherit;
-  background-color: #495464;
+
   text-decoration: none;
   padding: 0;
   border-radius: 3px;
-  border-bottom: 2px solid #fff;
-  transition: 0.4s opacity, 0.5s background-color;
-  margin: 10px;
+
+  transition: 0.5s ease-in;
+  margin-right: 20px;
+  color: #000;
 }
 
 .navigation-list__item--active {
   text-decoration: none;
   opacity: 0.8;
   background-color: #000;
-  margin: 10px;
 }
 
 .page-header__item li:hover {
@@ -201,7 +213,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: var(--text-color);
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -414,8 +426,11 @@ button:focus,
 /* aligning the about page start */
 
 .about-me {
-  height: 100vh;
-  background-color: #272626;
+  background-color: var(--footer-header);
+}
+
+section#about-me {
+  padding: 0 10vh 10vw;
 }
 
 .about-me__flexbox {
@@ -435,9 +450,10 @@ button:focus,
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #272626;
+  background-color: var(--footer-header);
   height: 90vh;
-  color: #e8e8e8;
+  color: var(--text-color);
+  padding: 10%;
 }
 
 .tech__Icons {
@@ -449,8 +465,7 @@ button:focus,
 .dev__Icon {
   height: 100px;
   width: 100px;
-  background-color: aquamarine;
-  margin: 10px;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
