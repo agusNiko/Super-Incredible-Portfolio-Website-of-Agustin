@@ -205,8 +205,8 @@ nav {
 /*burger menu header*/
 .burger {
   display: none;
-  position: fixed;
-  align-self: end;
+  /* position: fixed;
+  align-self: end; */
   margin-right: 20px;
 }
 .burger div {
@@ -220,88 +220,6 @@ nav {
 /*burger menu header ends*/
 
 /* with page-header__item I changed the direction of the nav-list to row */
-
-/* header media query */
-
-@media all and (min-width: 500px) and (max-width: 830px) {
-  nav {
-    width: 60%;
-  }
-
-  .page-header__item li {
-    font-size: 18px;
-  }
-
-  .page-header__logo {
-    font-size: 25px;
-  }
-}
-
-@media all and (max-width: 500px) {
-  main {
-    margin-top: 12vh;
-  }
-  .page-header {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 10px 0 0;
-  }
-
-  .page-header__logo {
-    font-size: 15px;
-  }
-
-  .page-header__item li {
-    font-size: 20px;
-    height: 60px;
-    text-align: center;
-  }
-
-  .page-header__item {
-    width: 100vw;
-    top: 8vh;
-    position: absolute;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    height: 50vh;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-
-  .burger {
-    display: block;
-    cursor: pointer;
-    z-index: 100;
-  }
-
-  nav {
-    justify-content: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 8vh;
-  }
-
-  .nav-items__active {
-    transform: translateX(0%);
-  }
-
-  .burger__toggle .burger__line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  .burger__toggle .burger__line2 {
-    opacity: 0;
-  }
-
-  .burger__toggle .burger__line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-}
-
-/* header media query ends */
 
 /* -------------------------------------------------------------------- */
 
@@ -381,11 +299,11 @@ nav {
   text-align: center;
   padding: 30px 0 15px;
   margin: 0;
-  padding-left: 10vh;
+  padding-left: 5%;
 }
 
 section#my-work {
-  padding: 0 10vh 10vw;
+  padding: 0 10% 10%;
 }
 
 .form-seccition__div {
@@ -434,7 +352,7 @@ button:focus,
 
 .about-me {
   background-color: var(--footer-header);
-  padding: 0 10vh 10vw;
+  padding: 0 10% 10%;
 }
 
 .about-me__flexbox {
@@ -646,6 +564,93 @@ button:focus,
     height: auto;
   }
 }
+
+/* header media query */
+
+@media all and (min-width: 500px) and (max-width: 830px) {
+  nav {
+    width: 60%;
+  }
+
+  .page-header__item li {
+    font-size: 18px;
+  }
+
+  .page-header__logo {
+    font-size: 25px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  main {
+    margin-top: 12vh;
+  }
+
+  section#my-work {
+    padding: 0 0% 0%;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0 0;
+  }
+
+  .page-header__logo {
+    font-size: 15px;
+  }
+
+  .page-header__item li {
+    font-size: 20px;
+    height: 60px;
+    text-align: center;
+    width: inherit;
+  }
+
+  .page-header__item {
+    width: 100vw;
+    top: 8vh;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 8vh;
+  }
+
+  .nav-items__active {
+    transform: translateX(0%);
+  }
+
+  .burger__toggle .burger__line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger__toggle .burger__line2 {
+    opacity: 0;
+  }
+
+  .burger__toggle .burger__line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* header media query ends */
 
 /* animation SVG */
 
