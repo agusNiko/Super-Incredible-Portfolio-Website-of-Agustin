@@ -10,7 +10,7 @@ Secondary Color: #97D477;
   --text-color: #495464;
   --primary-color: #f4f4f2;
   --footer-header: #e8e8e8;
-  --butons-and-details: #bbbfca;
+  --butons-and-details: #569e3d;
   --font-weight-h: 700;
   --font-weight-text: 400;
 }
@@ -167,7 +167,6 @@ nav {
   border: none;
   font-family: inherit;
 
-  text-decoration: none;
   padding: 0;
   border-radius: 3px;
 
@@ -179,7 +178,7 @@ nav {
 .navigation-list__item--active {
   text-decoration: none;
   opacity: 0.8;
-  background-color: #000;
+  background-color: #569e3d;
 }
 
 .page-header__item li:hover {
@@ -369,6 +368,10 @@ nav {
   margin: 0;
 }
 
+#contact-me h1 {
+  font-size: 60px;
+}
+
 .section__top-margin {
   padding-top: 110px;
 }
@@ -378,6 +381,11 @@ nav {
   text-align: center;
   padding: 30px 0 15px;
   margin: 0;
+  padding-left: 10vh;
+}
+
+section#my-work {
+  padding: 0 10vh 10vw;
 }
 
 .form-seccition__div {
@@ -393,7 +401,6 @@ nav {
 }
 
 button,
-.contact-form__submit,
 .button {
   cursor: pointer;
   font-family: inherit;
@@ -427,9 +434,6 @@ button:focus,
 
 .about-me {
   background-color: var(--footer-header);
-}
-
-section#about-me {
   padding: 0 10vh 10vw;
 }
 
@@ -446,14 +450,20 @@ section#about-me {
   align-items: center;
   flex-direction: column;
 }
+
 .contact-me {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   background-color: var(--footer-header);
   height: 90vh;
   color: var(--text-color);
   padding: 10%;
+}
+
+.fa-skype {
+  font-size: 50px;
 }
 
 .tech__Icons {
@@ -469,6 +479,12 @@ section#about-me {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.dev__Icon:hover {
+  transform: scale(1.1);
 }
 
 .activity-list {
@@ -485,8 +501,40 @@ section#about-me {
   display: inline-block;
   width: 33%;
   background-color: #fff;
-  border: 4px solid var(--butons-and-details);
+  /* border: 4px solid var(--butons-and-details); */
   padding: 10px;
+}
+
+.project-image {
+  border-radius: 5%;
+  box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+  transition: all ease-in-out 0.2s;
+}
+
+.project-image:hover {
+  filter: brightness(0.75);
+  box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
+
+.project-image-wrapper {
+  justify-self: center;
+
+  position: relative;
+}
+
+.project-image-wrapper:hover > h4 {
+  visibility: visible;
+}
+
+.project-image-wrapper > h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  visibility: hidden;
+  z-index: 2;
+  transition: all ease-in-out 0.2s;
 }
 
 /* end grid fallback */
