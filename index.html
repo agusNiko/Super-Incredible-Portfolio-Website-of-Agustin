@@ -183,22 +183,26 @@
                       </div> 
                         <h2>Myflix MovieApp</h2>
                         <p>
-                         ***  A web app that provides users with access to information about movies, directors, and genres. Users can sign up, update personal data, and create a list of favorites. Server-side and client-side were developed using the MERN stack
+                         A SPA that allows movie enthusiasts to access information about different movies,
+                         directors, and genres, whenever they want to. Having the ability to save lists of favorite
+                         movies will ensure users always have access to the films they want to watch or recommend
+                         to their peers. The server-side and client-side were developed using the MERN stack
                           <span id="dots">...</span><div id="more"> 
                               <h2>Technical Requirements</h2>
                               About: 
                               <ul>                      
-                                  <li>. </li>
-                                  <li>.</li>
-                                  <li>.</li>
-                                  <li>.</li>
+                                  <li>A single-page application (SPA). </li>
+                                  <li>Uses state routing to navigate between views and share URLs.</li>
+                                  <li>Gives users the option to filter movies.</li>
+                                  <li>Gives users the option to sort movies.</li>
                                   <li>Responsive</li>
-                                  <li>.</li>
-                                  <li>.</li>
+                                  <li>Uses Parcel as its build tool.</li>
+                                  <li>Written using the React library and in ES2015+.</li>
                                   <li>Uses React axios and async/await. </li>
-                                  <li>.</li>
-                                  <li>..</li>
-                                  <li>.</li>
+                                  <li>Written with React Redux (hence respecting the Flux pattern).</li>
+                                  <li>Uses Bootstrap as a UI library for styling and responsiveness.</li>
+                                  <li>Contains a mix of class components and function components.</li>
+                                  <li>Hosted online</li>
                                   </ul>
                               </div>
                         </p>
@@ -218,23 +222,27 @@
                         
                         <h2>wassApp chat</h2>
                         <p>
-                         ***  A chat application for mobile devices (Android and iOS) that provides users with a chat interface and the possibility to exchange text messages, images and share their location. 
+                          A chat application for mobile devices (Android and iOS) built using React Native, Expo, and Google Firestore Database. It provides users with a chat interface and allows them to exchange text messages,
+                          images and share their location.
                           <span id="dots1">...</span><div id="more1"> 
                               <h2>Technical Requirements</h2>
                               About: 
                               <ul>                      
-                                <li>. </li>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>Responsive</li>
-                                <li>.</li>
-                                <li>.</li>
+                                <li>Written in React Native.</li>
+                                <li>Developed using Expo.</li>
+                                <li>Styled according to the given screen design.</li>
+                                <li>Chat conversations are stored in Google Firestore Database.</li>
+                                <li>Authenticates users anonymously via Google Firebase authentication.</li>
+                                <li>Chat conversations are stored locally.</li>
+                                <li>Let users pick and send images from the phone’s image library.</li>
                                 <li>Uses React axios and async/await. </li>
-                                <li>.</li>
-                                <li>..</li>
-                                <li>.</li>
-                                  </ul>
+                                <li>Lets users take pictures with the device’s camera app, and send them</li>
+                                <li>Store images in Firebase Cloud Storage.</li>
+                                <li>Is able to read the user’s location data.</li>
+                                <li>Location data is sent via the chat in a map view.</li>
+                                <li>Chat interface and functionality created using the Gifted Chat library.</li>
+                                
+                              </ul>    
                               </div>
                         </p>
                         <button onclick="showMore1()" id="readMore1">Read more</button>
@@ -288,22 +296,20 @@
                        
                         <h2>Pokédex App</h2>
                         <p>
-                          *** A small web app built with Javascript, HTML, CSS, jQuery, and Bootstrap framework. Users can search through a pokemon collection that is loading from an external API. Details can be displayed in a modal by clicking on a pokemon's name. The code has been formatted according to ESLint rules.
+                          A web app built with Javascript, HTML, CSS and jQuery that loads Pokemons data from an external API and enables the viewing of data points in detail. Details are displayed in a modal by clicking on the name of a pokemon. The code has been formatted according to ESLint rules.
                           <span id="dots3">...</span><div id="more3"> 
                               <h2>Technical Requirements</h2>
                               About: 
                               <ul>                      
-                                <li>. </li>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>.</li>
+                                <li>The app loads data from an external API. </li>
+                                <li>It displays a list of items loaded from that API after the page is loaded.</li>
+                                <li>It Enables the viewing of more details for a given list item (like a Pokémon) on
+                                  demand, such as when clicking on a list item.</li>
+                                <li>It has CSS styling.</li>
                                 <li>Responsive</li>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>Uses React axios and async/await. </li>
-                                <li>.</li>
-                                <li>..</li>
-                                <li>.</li>
+                                <li>The JavaScript code is formatted according to ESLint rules.</li>
+                                <li>show loading indicators while loading data.</li>
+
                                   </ul>
                               </div>
                         </p>
@@ -352,29 +358,37 @@
                       <div class="grid__item">                  
                           <div class="project-image-wrapper meet__screenshot">
                             <h4>Project 6</h4>
-                            <img src="./img/meet-app.JPG" class="meet__screenshot project-image" alt="image of the meet application">
+                            <img src="./img/movieAPI.JPG" class="meet__screenshot project-image" alt="image of the meet application">
                           </div>  
                         
-                          <h2>hola</h2>
+                          <h2>Myflix API</h2>
                           <p>
-                            A serverless, progressive web application (PWA) built with React and using a test-driven development (TDD) technique. It uses the Google Calendar API and OAuth2 authentication flow to fetch upcoming events allowing users to search for a city and get a list of events hosted in that city and makes use of data visualization (recharts library). A service worker allows the app to work offline or in slow network conditions
-                            <span id="dots5">...</span><div id="more5"> 
+                            The complete server-side of Myflix, including the server, business logic,
+                            and business layers of the application. It consists of a well-designed REST API and
+                            architected database built using JavaScript, Node.js, Express, and MongoDB. The REST API
+                            will be accessed via commonly used HTTP methods like GET and POST. Similar methods
+                            (CRUD) are used to retrieve data from your database and store that data in a non-relational
+                            way.
+
+                            <span id="dots5">...</span>
+                              <div id="more5"> 
                                 <h2>Technical Requirements</h2>
                                 About: 
                                 <ul>                      
-                                  <li>. </li>
-                                  <li>.</li>
-                                  <li>.</li>
-                                  <li>.</li>
-                                  <li>Responsive</li>
-                                  <li>.</li>
-                                  <li>.</li>
-                                  <li>Uses React axios and async/await. </li>
-                                  <li>.</li>
-                                  <li>..</li>
-                                  <li>.</li>
-                                    </ul>
-                                </div>
+                                  <li>A Node.js and Express application.</li>
+                                  <li>Uses REST architecture, with URL endpoints corresponding to the data operations listed above</li>
+                                  <li>Uses at least three middleware modules, such as the body-parser package for reading data from requests and morgan for logging.</li>
+                                  <li>Uses a “package.json” file.</li>
+                                  <li>Is built using MongoDB.</li>
+                                  <li>Modeled with Mongoose.</li>
+                                  <li>Provides movie information in JSON format.</li>
+                                  <li>The JavaScript code is error-free.</li>
+                                  <li>Tested in Postman.</li>
+                                  <li>Includes user authentication and authorization code.</li>
+                                  <li>Includes data validation logic.</li>
+                                  <li>Meets data security regulation</li>
+                                </ul>
+                              </div>
                           </p>
                           <button onclick="showMore5()" id="readMore5">Read more</button>
                           <div class="work__buttons">
