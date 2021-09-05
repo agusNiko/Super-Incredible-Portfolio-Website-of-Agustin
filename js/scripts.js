@@ -3,6 +3,7 @@
 const navMenu = () => {
   let burger = document.getElementById("burger");
   let nav = document.querySelector(".page-header__item");
+  let menuBackground = document.querySelector(".menu-background");
 
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-items__active");
@@ -10,6 +11,8 @@ const navMenu = () => {
     //burger animation
 
     burger.classList.toggle("burger__toggle");
+
+    menuBackground.classList.toggle("menu-background--Active");
   });
 };
 navMenu();
