@@ -40,7 +40,13 @@ const highlightMenu = () => {
 
 window.addEventListener("scroll", highlightMenu);
 menuItems.forEach((el) => {
-  el.addEventListener("click", highlightMenu);
+  el.addEventListener("click", () => {
+    highlightMenu();
+    let burger = document.getElementById("burger");
+    burger.classList.toggle("burger__toggle");
+    let nav = document.querySelector(".page-header__item");
+    nav.classList.toggle("nav-items__active");
+  });
 });
 
 //show and hide details about the projects
