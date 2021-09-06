@@ -123,9 +123,9 @@ main {
 
 header {
   background-color: var(--footer-header);
-
   position: fixed;
   width: 100%;
+  z-index: 900;
 }
 
 .page-header {
@@ -149,13 +149,13 @@ nav {
   justify-content: end;
 }
 
-.menu-background {
+/* .menu-background {
   display: none;
   width: 100%;
   background-color: --footer-header;
   height: 50vh;
   transition: transform 0.5s ease-in;
-}
+} */
 
 .menu-background--Active {
   display: block;
@@ -608,16 +608,16 @@ button:focus,
   }
 
   .page-header__item {
-    width: 100vw;
-    top: 8vh;
+    width: 100%;
+    top: 100px;
     position: absolute;
     flex-direction: column;
     justify-content: space-around;
     padding: 0;
     margin: 0;
-    height: 50vh;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    background-color: #000;
   }
 
   .burger {
