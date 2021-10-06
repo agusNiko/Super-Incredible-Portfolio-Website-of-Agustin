@@ -38,14 +38,15 @@ body {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: var(--font-weight-h);
-  padding: 15px;
+  padding: 0px, 15px;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: var(--font-weight-h);
+  line-height: 26pt;
 }
 
 h3 {
@@ -57,8 +58,8 @@ a {
   color: var(--butons-and-details);
 }
 
-a:visited {
-  color: var(--butons-and-details);
+p {
+  font-size: 20px;
 }
 
 a:hover,
@@ -119,7 +120,27 @@ main {
 
 .profile-regards {
   padding-left: 20px;
-  max-width: 450px;
+  max-width: 500px;
+}
+
+.profile-regards a {
+  text-decoration: none;
+}
+
+.check-my-work {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  opacity: 0.8;
+  background-color: #569e3d;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 15px;
+}
+
+.blank__space {
+  height: 50px;
 }
 
 header {
@@ -140,7 +161,7 @@ header {
 } /* . the flex of the page header change the distribution of the logo and the nav-section. if I want to change the direction of this two I have to do it from here */
 
 .page-header__logo {
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 400;
   font-family: "Chakra Petch", sans-serif;
 }
@@ -259,17 +280,11 @@ nav {
 .profile h1 {
   font-size: 44px;
   font-weight: 700;
-  background: linear-gradient(
-    to left,
-    #6f6f89,
-    #000
-  ); /* creates a background gradient */
-  -webkit-background-clip: text; /* "clips" the backgrouncolor with the text */
-  -webkit-text-fill-color: transparent; /* make trasparent the text so you can see the cliped background color */
 }
 
 .contact-me-info {
   padding: 0 0 15px 20px;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 .contact-me-info h1 {
@@ -382,8 +397,8 @@ button:focus,
   justify-content: space-around;
 }
 .dev__Icon {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   margin: 20px;
   display: flex;
   justify-content: center;
