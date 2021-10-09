@@ -36,26 +36,30 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+body > main:nth-child(2) {
+  padding-bottom: 0px;
+}
 
 h1 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: var(--font-weight-h);
   padding: 0px, 15px;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: var(--font-weight-h);
   line-height: 26pt;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: var(--font-weight-h);
 }
 
 a {
   color: var(--butons-and-details);
+  margin-top: auto;
 }
 
 p {
@@ -226,18 +230,14 @@ nav {
 /* -------------------------------------------------------------------- */
 
 .page-footer {
-  background-image: url(../img/Hexagon-dotted-connect-line-background.1.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  padding: 0 5px 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   clear: both;
   width: 100%;
-  height: 400px;
+  height: 200px;
+  background-color: black;
 }
 
 .social-media {
@@ -335,7 +335,13 @@ button:focus,
 
 .about-me {
   background-color: var(--footer-header);
-  padding: 0 10% 10%;
+  padding: 0 10% 2%;
+}
+
+.download__resume {
+  display: block;
+  width: max-content;
+  margin: auto;
 }
 
 .about-me__flexbox {
@@ -358,7 +364,7 @@ button:focus,
   flex-direction: column;
   justify-content: center;
   background-color: var(--footer-header);
-  height: 90vh;
+  height: 80vh;
   color: var(--text-color);
   padding: 10%;
 }
@@ -400,8 +406,9 @@ button:focus,
 
 .grid__item {
   background-color: #fff;
-  /* border: 4px solid var(--butons-and-details); */
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-image {
@@ -451,6 +458,9 @@ button:focus,
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
+  bottom: 0px;
+  align-self: auto;
+  height: 100%;
 }
 .work__buttons a {
   padding: 10px;
@@ -474,10 +484,13 @@ button:focus,
 #readMore5 {
   background: none;
   border: none;
-  padding: 0;
   color: var(--text-color);
   text-decoration: underline;
   cursor: pointer;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  text-align: inherit;
 }
 
 .email {
