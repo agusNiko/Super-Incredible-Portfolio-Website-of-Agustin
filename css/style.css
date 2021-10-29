@@ -411,6 +411,7 @@ button:focus,
   padding: 10px;
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 .project-image {
@@ -867,4 +868,10 @@ button:focus,
 
 .myflix__home {
   max-width: 400px;
+}
+
+/*work filter*/
+
+.show {
+  display: flex;
 }
